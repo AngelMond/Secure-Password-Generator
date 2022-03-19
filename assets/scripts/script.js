@@ -2,8 +2,6 @@
 
 
 
-
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -110,7 +108,7 @@ function generatePassword(){
     }
 
     //IF USER ENTERED AN INVALID OPTION WILL TELL TO THE USER AND WILL ASK IF WANT TO CHOOSE AGAIN THE LENGHT OF THE PASSWORD 
-   } else{
+   } else {
      alert("Invalid option." + "\n" + "\n" + "Please enter a number from 8 to 128")
      var chooseAgain = confirm("Do you want to choose again?")
 
@@ -167,20 +165,3 @@ function generatePassword(){
 
 
 
-
-
-/*
-
-
-
-  //GENERATE AUTOMATIC PASSWORD
-  var passwordLength = (base, length) =>{
-    var password = "";
-    for(var i = 0; i < length; i++){
-      var random = Math.floor(Math.random() * base.length);
-      password += base.charAt(random);
-    }
-    return password
-  }
-
-*/
