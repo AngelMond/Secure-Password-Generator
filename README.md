@@ -18,4 +18,6 @@
 
 # SCREENSHOTS
 !["Password Generator"](assets/screenshots/screenshot1.jpg)
+
+* Password Generated
 !["Password Generated"](assets/screenshots/screenshot2.jpg)
