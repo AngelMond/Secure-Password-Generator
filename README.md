@@ -2,7 +2,7 @@
 
 * This application allows the user to generate a Secure password in base of a certain criteria chosen by the user. The criteria contemplates if the password will have lower and upper case letters, numbers and special characters.
 
-# ABOUT THIS PROYECT AND TECNOLOGIES
+# ABOUT THIS PROYECT AND TECHNOLOGIES
 
 * This app allows anybody to have and use secure passwords and that solves the problem of many users who use very weak passwords.
 
