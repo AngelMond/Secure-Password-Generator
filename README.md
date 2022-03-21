@@ -17,5 +17,5 @@
 # Link to the app https://angelmond.github.io/Secure-Password-Generator/
 
 # SCREENSHOTS
-!["Password Generator"](assets/screeshots/screenshot1.jpg);
-!["Password Generated"](assets/screeshots/screenshot2.jpg);
+!["Password Generator"](assets/screenshots/screenshot1.jpg);
+!["Password Generated"](assets/screenshots/screenshot2.jpg);
