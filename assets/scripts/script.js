@@ -22,22 +22,22 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-
-
 /******************* MAIN FUNCTION *****************************/
 function generatePassword(){
+
+  //THIS VARIABLE WILL STORE MY GENERATED PASSWORD AND WILL BE THE RETURN FOR THIS FUNCTION
+  var base = [];
+
+  //CONTAINERS FOR MY CHARACTERS
+  var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+  var upperCaseLetters = "ABCDEFGHIJKLMNOPQSRTUVWXYZ";
+  var numbers = "0123456789";
+  var symbols = "!#$%&*+/:;<>=?@-_~|^[](){}";
+
 
   //JUST AN ALERT THAT SAYS TO SELECT A CRITERIA FOR GENERATE THE PASSWORD
   alert("Please choose the following criteria to generate your password.");
 
- //CONTAINERS FOR MY CHARACTERS
- var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
- var upperCaseLetters = "ABCDEFGHIJKLMNOPQSRTUVWXYZ";
- var numbers = "0123456789";
- var symbols = "!#$%&*+/:;<>=?@-_~|^[](){}";
-
-//THIS VARIABLE WILL STORE MY GENERATED PASSWORD AND WILL BE THE RETURN FOR THIS FUNCTION
- var base = [];
 
  // CHOOSE THE LENGTH OF THE PASSWORD
  var passwordLength = parseInt(prompt("Select the length for your password." + "\n" + "\n" + "From 8 to 128 characters."));
@@ -46,15 +46,16 @@ function generatePassword(){
  //CONDITION, VALIDATES THE LENGHT OF THE PASSWORD. IF PUT A WRONG OPTION GOES TO THE ELSE, IF ITS TRUE, THEN RUNS THE CRITERIA FOR THE PASSWORD
   if (passwordLength >= 8 && passwordLength <= 128){
 
+    
      /***************** CRITERIA FOR THE PASSWORD   ***************/
 
       //DO YOU WANT LOWERCASE LETTERS?
-    var confirmLowerLetters = confirm("Do you want Lower Case letters?");
+    var confirmLowerLetters = confirm("Do you want to include Lower Case letters?");
     var lowerLetters = confirmLowerLetters;
 
 
     //DO YOU WANT UPPERCASE LETTERS?
-    var confirmUpperLetters = confirm("Do you want Upper Case letters?");
+    var confirmUpperLetters = confirm("Do you want to include Upper Case letters?");
     var upperLetters = confirmUpperLetters;
     
     
@@ -92,7 +93,7 @@ function generatePassword(){
          base += symbols[Math.floor(Math.random() * symbols.length)];
       }
 
-      //IF USER DON'T SELECT ANY OPTION WILL ASK IF WANT TO SELECT AGAIN, OTHERWISE THE PROGRAM WILL END
+      //IF USER DON'T SELECT ANY OPTION WILL SAY THAT NEED TO CHOOSE AT LEAST ONE OPTION AND THEN ASK IF WANT TO SELECT AGAIN, OTHERWISE THE PROGRAM WILL END
       if(!lowerLetters && !upperLetters && !numbersRecieve && !symbolsRecieve){
         var selectAgain = confirm("Please select at least one option to add to your password. \n" + "\n" + " Would you like to select again?");
 
@@ -109,21 +110,21 @@ function generatePassword(){
 
     //IF USER ENTERED AN INVALID OPTION WILL TELL TO THE USER AND WILL ASK IF WANT TO CHOOSE AGAIN THE LENGHT OF THE PASSWORD 
    } else {
-     alert("Invalid option." + "\n" + "\n" + "Please enter a number from 8 to 128")
-     var chooseAgain = confirm("Do you want to choose again?")
-
+     alert("Invalid option." + "\n" + "\n" + "Please enter a number from 8 to 128");
+     var chooseAgain = confirm("Do you want to choose again?");
+    
+      
        if(chooseAgain){
-         generatePassword()
+        generatePassword();
 
        } else{
-         alert("See you!")
+         alert("See you!");
        }
-  
+       
    }
-
+   
    //RETURN THAT COLLECTS THE VALUE OF THE GENERATED PASSWORD
  return base.slice(0, i);
-
 }
 //END OF MY GENERATEPASSWORD FUNCTION
 
